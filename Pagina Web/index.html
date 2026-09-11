@@ -3,28 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Misión Diaria: Conquista tus Metas</title>
+    <title>Misión Diaria</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div class="contenedor">
+    <div class="tarjeta-principal">
         <header class="cabecera">
-            <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=800&q=80" alt="Productividad" class="imagen-cabecera">
+            <div class="manga-imagen">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Paisaje inspirador">
+            </div>
             <h1 class="titulo">Misión Diaria</h1>
-            <p class="subtitulo">Organiza tus tareas y domina tu día</p>
+            <p class="subtitulo">Supera tus tareas, planea tu día</p>
         </header>
 
         <form id="formulario-tarea" class="formulario">
-            <input type="text" id="input-tarea" class="campo-texto" placeholder="¿Qué tarea vas a hacer?" required>
+            <input type="text" id="input-tarea" class="campo-texto" placeholder="¿Cuál es tu siguiente objetivo?" required>
             
             <div class="opciones">
                 <select id="select-dificultad" class="selector-dificultad">
                     <option value="Fácil">Fácil</option>
-                    <option value="Medio" selected>Medio</option>
+                    <option value="Medio">Medio</option>
                     <option value="Difícil">Difícil</option>
                 </select>
-                <button type="submit" class="boton-agregar">Agregar</button>
+                <button type="submit" class="boton-agregar">+ Agregar</button>
             </div>
         </form>
 
