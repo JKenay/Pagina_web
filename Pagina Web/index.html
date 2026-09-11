@@ -9,28 +9,40 @@
 <body>
 
     <div class="tarjeta-principal">
-        <header class="cabecera">
+        
+        <section id="vista-bienvenida" class="vista-seccion">
             <div class="manga-imagen">
                 <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Paisaje inspirador">
             </div>
             <h1 class="titulo">Misión Diaria</h1>
-            <p class="subtitulo">Supera tus tareas, planea tu día</p>
-        </header>
+            <p class="subtitulo">Tu espacio personal para organizar objetivos y planifica tu dia a dia.</p>
+            <button id="boton-comenzar" class="boton-principal">¡Comenzar!</button>
+        </section>
 
-        <form id="formulario-tarea" class="formulario">
-            <input type="text" id="input-tarea" class="campo-texto" placeholder="¿Cuál es tu siguiente objetivo?" required>
+        <section id="vista-tareas" class="vista-seccion oculto">
+            <header class="cabecera-tareas">
+                <h2>Mis Objetivos</h2>
+                <button id="boton-inicio" class="boton-secundario">Inicio</button>
+            </header>
+
+            <form id="formulario-tarea" class="formulario">
+                <input type="text" id="input-tarea" class="campo-texto" placeholder="¿Cuál es tu siguiente objetivo?" required>
+                
+                <div class="opciones">
+                    <select id="select-dificultad" class="selector-dificultad">
+                        <option value="Fácil">Fácil</option>
+                        <option value="Medio" selected>Medio</option>
+                        <option value="Difícil">Difícil</option>
+                    </select>
+                    <button type="submit" class="boton-agregar">+ Agregar</button>
+                </div>
+            </form>
             
-            <div class="opciones">
-                <select id="select-dificultad" class="selector-dificultad">
-                    <option value="Fácil">Fácil</option>
-                    <option value="Medio">Medio</option>
-                    <option value="Difícil">Difícil</option>
-                </select>
-                <button type="submit" class="boton-agregar">+ Agregar</button>
-            </div>
-        </form>
+            <ul id="lista-tareas" class="lista-tareas"></ul>
 
-        <ul id="lista-tareas" class="lista-tareas"></ul>
+            <button id="boton-limpiar" class="boton-limpiar">Limpiar completadas</button>
+        </section>
+
     </div>
 
     <script src="script.js"></script>

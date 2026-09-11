@@ -1,9 +1,24 @@
+const vistaBienvenida = document.getElementById('vista-bienvenida');
+const vistaTareas = document.getElementById('vista-tareas');
+const botonComenzar = document.getElementById('boton-comenzar');
+const botonInicio = document.getElementById('boton-inicio');
 const formulario = document.getElementById('formulario-tarea');
 const inputTarea = document.getElementById('input-tarea');
 const selectDificultad = document.getElementById('select-dificultad');
 const listaTareas = document.getElementById('lista-tareas');
+const botonLimpiar = document.getElementById('boton-limpiar');
 
 let tareas = [];
+
+botonComenzar.addEventListener('click', () => {
+    vistaBienvenida.classList.add('oculto');
+    vistaTareas.classList.remove('oculto');
+});
+
+botonInicio.addEventListener('click', () => {
+    vistaTareas.classList.add('oculto');
+    vistaBienvenida.classList.remove('oculto');
+});
 
 formulario.addEventListener('submit', function(evento) {
     evento.preventDefault();
@@ -60,3 +75,8 @@ function eliminarTarea(id) {
     tareas = tareas.filter(tarea => tarea.id !== id);
     mostrarTareas();
 }
+
+botonLimpiar.addEventListener('click', () => {
+    tareas = tareas.filter(tarea => !tarea.completada);
+    mostrarTareas();
+});
